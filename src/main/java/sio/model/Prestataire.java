@@ -36,4 +36,12 @@ public class Prestataire extends Intervenant{
         this.societe = societe;
     }
 
+    public double calculCoutProjet(int nbJour) {
+        if (forfait) {
+            return nbJour * societe.getCoutJournalier();
+        } else {
+            return nbJour * coutJournalier;
+        }
+    }
+
 }
