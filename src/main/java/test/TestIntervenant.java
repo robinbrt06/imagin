@@ -12,7 +12,10 @@ public class TestIntervenant {
         Societe societe = new Societe(1, "InfoServices", "12 rue de la Paix", "75002", "Paris", 600, new ArrayList<Prestataire>());
 
         Prestataire prestataire = new Prestataire(1, "Paul", "Martin", true, 450, societe);
+        Prestataire prestataire2 = new Prestataire(2, "Nathan", "Elie", false, 450, societe);
+
         societe.addPrestataire(prestataire);
+        societe.addPrestataire(prestataire2);
 
         Salarie salarie = new Salarie(2, "Julie", "Durand", LocalDate.of(2020, 9, 1), 3);
 
@@ -27,5 +30,10 @@ public class TestIntervenant {
         System.out.println("Date d'embauche : " + salarie.getDtEmbauche());
         System.out.println("Échelon : " + salarie.getEchelon());
         salarie.information("En arrêt maladie");
+
+        System.out.println("Coût projet pour 100 jours");
+        System.out.println(salarie.getNom() + " " + salarie.getPrenom() + " (salarié) : " + salarie.calculCoutProjet(100));
+        System.out.println(prestataire.getNom() + " " + prestataire.getPrenom() + " (forfait) : " + prestataire.calculCoutProjet(100));
+        System.out.println(prestataire2.getNom() + " " + prestataire2.getPrenom() + " (hors forfait) : " + prestataire2.calculCoutProjet(100));
     }
 }
