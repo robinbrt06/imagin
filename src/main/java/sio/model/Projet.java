@@ -13,7 +13,7 @@ public class Projet {
     public Projet() {
     }
 
-    public Projet(int id, String nom, int nbJoursPrevus, int budgetPrevu) {
+    public Projet(int id, String nom, int nbJoursPrevus, double budgetPrevu) {
         this.id = id;
         this.nom = nom;
         this.nbJoursPrevus = nbJoursPrevus;
@@ -44,11 +44,11 @@ public class Projet {
         this.nbJoursPrevus = nbJoursPrevus;
     }
 
-    public int getBudgetPrevu() {
+    public double getBudgetPrevu() {
         return budgetPrevu;
     }
 
-    public void setBudgetPrevu(int budgetPrevu) {
+    public void setBudgetPrevu(double budgetPrevu) {
         this.budgetPrevu = budgetPrevu;
     }
 
