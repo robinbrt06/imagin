@@ -84,4 +84,6 @@ public abstract class Intervenant {
     public void information(String vInformation) {
     }
 
+    public abstract double calculCoutProjet(int nbJour);
+
 }
