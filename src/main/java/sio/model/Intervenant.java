@@ -80,4 +80,8 @@ public class Intervenant {
         }
         projetsResponsables.add(p);
     }
+
+    public void information(String vInformation) {
+    }
+
 }
