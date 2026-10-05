@@ -5,6 +5,8 @@ import java.time.LocalDate;
 public class Salarie extends Intervenant {
     private LocalDate dtEmbauche;
     private int echelon;
+    private static final double COUT_JOURNALIER = 550;
+
 
     public Salarie(int id, String prenom, String nom, LocalDate dtEmbauche, int echelon) {
         super(id, prenom, nom);
@@ -29,7 +31,8 @@ public class Salarie extends Intervenant {
     }
 
     @Override
-    public void information(String vInformation) {
-        System.out.println("Information complémentaire : " + vInformation);
+    public double calculCoutProjet(int nbJour) {
+        return nbJour * COUT_JOURNALIER;
     }
+
 }
