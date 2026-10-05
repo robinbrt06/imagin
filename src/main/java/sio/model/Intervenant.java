@@ -8,6 +8,7 @@ public class Intervenant {
     private String nom;
     private Categorie categorie;
     private ArrayList<Affectation> affectations;
+    private ArrayList<Projet> projetsResponsables;
 
     public Intervenant() {
     }
@@ -56,5 +57,27 @@ public class Intervenant {
 
     public void setAffectations(ArrayList<Affectation> affectations) {
         this.affectations = affectations;
+    }
+
+    public ArrayList<Projet> getProjetsResponsables() {
+        return projetsResponsables;
+    }
+
+    public void setProjetsResponsables(ArrayList<Projet> projetsResponsables) {
+        this.projetsResponsables = projetsResponsables;
+    }
+
+    public void addAffectation(Affectation a) {
+        if (affectations == null) {
+            affectations = new ArrayList<Affectation>();
+        }
+        affectations.add(a);
+    }
+
+    public void addProjetResponsable(Projet p) {
+        if (projetsResponsables == null) {
+            projetsResponsables = new ArrayList<Projet>();
+        }
+        projetsResponsables.add(p);
     }
 }

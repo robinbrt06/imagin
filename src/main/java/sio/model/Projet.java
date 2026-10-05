@@ -6,7 +6,7 @@ public class Projet {
     private int id;
     private String nom;
     private int nbJoursPrevus;
-    private int budgetPrevu;
+    private double budgetPrevu;
     private Intervenant responsable;
     private ArrayList<Affectation> affectations;
 
@@ -66,5 +66,12 @@ public class Projet {
 
     public void setAffectations(ArrayList<Affectation> affectations) {
         this.affectations = affectations;
+    }
+
+    public void addAffectation(Affectation a) {
+        if (affectations == null) {
+            affectations = new ArrayList<Affectation>();
+        }
+        affectations.add(a);
     }
 }

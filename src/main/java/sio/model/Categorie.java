@@ -38,4 +38,11 @@ public class Categorie {
     public void setIntervenants(ArrayList<Intervenant> intervenants) {
         this.intervenants = intervenants;
     }
+
+    public void addIntervenant(Intervenant i) {
+        if (intervenants == null) {
+            intervenants = new ArrayList<Intervenant>();
+        }
+        intervenants.add(i);
+    }
 }
