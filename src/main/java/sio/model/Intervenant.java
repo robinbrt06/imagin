@@ -2,7 +2,7 @@ package sio.model;
 
 import java.util.ArrayList;
 
-public class Intervenant {
+public abstract class Intervenant {
     private int id;
     private String prenom;
     private String nom;
