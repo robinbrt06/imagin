@@ -2,7 +2,7 @@ package sio.model;
 
 import java.util.ArrayList;
 
-public class Intervenant {
+public abstract class Intervenant {
     private int id;
     private String prenom;
     private String nom;
@@ -80,4 +80,10 @@ public class Intervenant {
         }
         projetsResponsables.add(p);
     }
+
+    public void information(String vInformation) {
+    }
+
+    public abstract double calculCoutProjet(int nbJour);
+
 }
